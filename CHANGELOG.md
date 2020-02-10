@@ -1,3 +1,10 @@
+## [3.12.1](https://github.com/auth0/auth0-instrumentation/compare/v3.12.0...v3.12.1) (2020-02-10)
+
+
+### Bug Fixes
+
+* TS syntax errors ([#234](https://github.com/auth0/auth0-instrumentation/issues/234)) ([494923a](https://github.com/auth0/auth0-instrumentation/commit/494923ae8dcee0ae754a20ac75471a358149aa56))
+
 # [3.12.0](https://github.com/auth0/auth0-instrumentation/compare/v3.11.0...v3.12.0) (2020-02-10)
 
 
