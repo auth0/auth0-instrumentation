@@ -243,7 +243,25 @@ describe('tracer express middleware', function() {
           assert.equal(1, report.spans.length);
           const reqSpan = report.firstSpanWithTagValue('moreinfo', 'here');
           assert.ok(reqSpan);
-          assert.equal('/moreinfo/:id', reqSpan.operationName());
+          assert.equal(reqSpan.operationName(), '/moreinfo/:id');
+          assert.equal(reqSpan.tags()['http.path'], '/moreinfo/1');
+          // This might be different than the path if calling with the host
+          assert.equal(reqSpan.tags()['http.url'], '/moreinfo/1');
+        });
+    });
+
+    it('should set `http.request.invalid_route` as operation name when the route is unknown', function() {
+      return request(app)
+        .get('/invalid_route/invalid_route')
+        .expect(function() {
+          const report = $mock.report();
+          assert.equal(1, report.spans.length);
+          const reqSpan = report.firstSpanWithTagValue('http.path', '/invalid_route/invalid_route');
+          assert.ok(reqSpan);
+          assert.equal(reqSpan.operationName(), 'http.request.invalid_route');
+          assert.equal(reqSpan.tags()['http.path'], '/invalid_route/invalid_route');
+          // This might be different than the path if calling with the host
+          assert.equal(reqSpan.tags()['http.url'], '/invalid_route/invalid_route');
         });
     });
 
