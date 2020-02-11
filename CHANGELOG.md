@@ -1,3 +1,10 @@
+## [3.12.2](https://github.com/auth0/auth0-instrumentation/compare/v3.12.1...v3.12.2) (2020-02-11)
+
+
+### Bug Fixes
+
+* Avoid sending raw path for invalid routes as operation names ([#235](https://github.com/auth0/auth0-instrumentation/issues/235)) ([153e238](https://github.com/auth0/auth0-instrumentation/commit/153e23839f7b245ea3df1b71930321c6546113e1))
+
 ## [3.12.1](https://github.com/auth0/auth0-instrumentation/compare/v3.12.0...v3.12.1) (2020-02-10)
 
 
