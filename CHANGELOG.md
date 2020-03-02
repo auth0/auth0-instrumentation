@@ -1,3 +1,10 @@
+## [3.12.3](https://github.com/auth0/auth0-instrumentation/compare/v3.12.2...v3.12.3) (2020-03-02)
+
+
+### Bug Fixes
+
+* Add safeguard for request tagging ([#237](https://github.com/auth0/auth0-instrumentation/issues/237)) ([e7676ef](https://github.com/auth0/auth0-instrumentation/commit/e7676ef6e27824784f4f99e4178ff11e172f0790))
+
 ## [3.12.2](https://github.com/auth0/auth0-instrumentation/compare/v3.12.1...v3.12.2) (2020-02-11)
 
 
