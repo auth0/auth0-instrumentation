@@ -86,6 +86,37 @@ describe('tracer factory', () => {
           'ot-mock-baggage-a': 'b'
         });
       });
+
+      it('uses a separate baggage set per root parent', () => {
+        const tracer = tracingFactory.create({}, {}, { TRACE_AGENT_CLIENT: 'mock' }, {});
+
+        const span1 = tracer.startSpan('myOperation1');
+        span1.setBaggageItem('a', 'b');
+
+        const span2 = tracer.startSpan('myOperation2');
+        span2.setBaggageItem('a', 'c');
+
+        const child1 = tracer.startSpan('child1', { childOf: span1 });
+        const child2 = tracer.startSpan('child2', { childOf: span2 });
+
+        const carrier1 = {};
+        tracer.inject(child1, opentracing.FORMAT_TEXT_MAP, carrier1);
+
+        const carrier2 = {};
+        tracer.inject(child2, opentracing.FORMAT_TEXT_MAP, carrier2);
+
+        assert.deepEqual(carrier1, {
+          'ot-mock-tracer': child1.uuid(),
+          'ot-mock-operation': 'child1',
+          'ot-mock-baggage-a': 'b'
+        });
+
+        assert.deepEqual(carrier2, {
+          'ot-mock-tracer': child2.uuid(),
+          'ot-mock-operation': 'child2',
+          'ot-mock-baggage-a': 'c'
+        });
+      });
     });
   });
 
