@@ -58,7 +58,7 @@ export declare interface ExceptionOptions {
 export declare interface ErrorReporter {
   captureException(err: any, options: ExceptionOptions): void;
   captureMessage(msg: string, options: ExceptionOptions): void;
-  patchGlobal(exitHandler: () => void): void;
+  patchGlobal(exitHandler: () => void);
   express: {
     requestHandler: any;
     errorHandler: any;
@@ -75,7 +75,7 @@ export declare interface Span {
   setTag(tag: string, value: string): void;
   addTags(tags: { [k: string]: string }): void;
   tracer: () => Tracer;
-  setOperationName(name: string): void,
+  setOperationName(name: string),
   context: any;
   isStub: boolean
 }
@@ -90,8 +90,8 @@ export declare interface Tracer {
 
 export declare interface Profiler {
   setupProcessListener(): void;
-  createProfile(callback: Callback): void;
-  createProfile(timeout: number, callback: Callback): void;
+  createProfile(callback: Callback);
+  createProfile(timeout: number, callback: Callback);
   createSnapshot(name: string): void;
   report(path: string, reason: string): void;
   setupGCReporter(): void;
