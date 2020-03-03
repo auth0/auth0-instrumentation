@@ -1,3 +1,10 @@
+## [3.12.4](https://github.com/auth0/auth0-instrumentation/compare/v3.12.3...v3.12.4) (2020-03-03)
+
+
+### Bug Fixes
+
+* baggage item propagation on the mock tracer ([#238](https://github.com/auth0/auth0-instrumentation/issues/238)) ([2addb4f](https://github.com/auth0/auth0-instrumentation/commit/2addb4fd139a46c5e9404dc1de09f6735150add9))
+
 ## [3.12.3](https://github.com/auth0/auth0-instrumentation/compare/v3.12.2...v3.12.3) (2020-03-02)
 
 
