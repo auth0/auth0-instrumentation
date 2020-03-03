@@ -1,3 +1,15 @@
+## [3.12.5](https://github.com/auth0/auth0-instrumentation/compare/v3.12.4...v3.12.5) (2020-03-03)
+
+
+### Bug Fixes
+
+* Avoid implicit return values in methods ([1efa4cc](https://github.com/auth0/auth0-instrumentation/commit/1efa4ccd5d83caa69d6ad75954c42e4f721d5fbf))
+
+
+### Reverts
+
+* Revert "Avoid implicit return values in methods (#239)" (#240) ([04a3e6b](https://github.com/auth0/auth0-instrumentation/commit/04a3e6b368977456395e5b14065b04278a4caf02)), closes [#239](https://github.com/auth0/auth0-instrumentation/issues/239) [#240](https://github.com/auth0/auth0-instrumentation/issues/240)
+
 ## [3.12.4](https://github.com/auth0/auth0-instrumentation/compare/v3.12.3...v3.12.4) (2020-03-03)
 
 

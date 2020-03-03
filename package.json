@@ -1,6 +1,6 @@
 {
   "name": "@a0/instrumentation",
-  "version": "3.12.4",
+  "version": "3.12.5",
   "description": "Instrumentation for logs, metrics, and exceptions",
   "main": "index.js",
   "types": "index.d.ts",
