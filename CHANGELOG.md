@@ -1,3 +1,10 @@
+# [3.13.0](https://github.com/auth0/auth0-instrumentation/compare/v3.12.5...v3.13.0) (2020-03-04)
+
+
+### Features
+
+* **tracer:** Lightstep exposes new env var for clearing span buffer ([#236](https://github.com/auth0/auth0-instrumentation/issues/236)) ([908a26f](https://github.com/auth0/auth0-instrumentation/commit/908a26fbc982ad26cb0cbef3b3dd5256b89d2873)), closes [#SREPR-580](https://github.com/auth0/auth0-instrumentation/issues/SREPR-580)
+
 ## [3.12.5](https://github.com/auth0/auth0-instrumentation/compare/v3.12.4...v3.12.5) (2020-03-03)
 
 
